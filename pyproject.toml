@@ -1,0 +1,22 @@
+[project]
+name = "DualMeshUDF"
+version = "1.0.0"
+authors = [
+  { name="Congyi Zhang", email="zhcongyi@gmail.com" },
+]
+description = "DualMesh-UDF"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[build-system]
+requires = ["setuptools", "pybind11", "numpy", "libigl"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+"Homepage" = "https://github.com/cong-yi/DualMesh-UDF"
+"Bug Tracker" = "https://github.com/cong-yi/DualMesh-UDF/issues"
