@@ -28,7 +28,7 @@ mesh_v, mesh_f = extract_mesh(udf_func, udf_grad_func)
 
 ### Example
 
-We prepared several [checkpoints](https://drive.google.com/drive/folders/12ys47-DjfXC3E-Kt5V2e1DWisynC0rpp?usp=sharing) for test.  and run the following command:
+We prepared several [checkpoints](https://drive.google.com/drive/folders/12ys47-DjfXC3E-Kt5V2e1DWisynC0rpp?usp=sharing) for test. Please download the checkpoints and run the following command:
 ```
 pip install torch
 python example/test.py --pretrained [path_to_checkpoint] --mesh_prefix [folder_prefix_for_mesh]
