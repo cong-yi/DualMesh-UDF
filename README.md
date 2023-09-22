@@ -25,6 +25,21 @@ from DualMeshUDF import extract_mesh
 mesh_v, mesh_f = extract_mesh(udf_func, udf_grad_func)
 ```
 
+
+### Example
+
+We prepared several [checkpoints](https://drive.google.com/drive/folders/12ys47-DjfXC3E-Kt5V2e1DWisynC0rpp?usp=sharing) for test.  and run the following command:
+```
+pip install torch
+python example/test.py --pretrained [path_to_checkpoint] --mesh_prefix [folder_prefix_for_mesh]
+```
+The default value for `mesh_prefix` is set to `example/results`. so the output meshes are stored in the folder `example/results`.
+
+For example, please put the checkpoints in the folder `example/checkpoints/` and run:
+```
+python example/test.py --pretrained example/checkpoints/fandisk.pth
+```
+
 ## Citation
 If you find our method useful for your research, please cite our paper:
 
