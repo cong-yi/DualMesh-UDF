@@ -33,7 +33,7 @@ We prepared several [checkpoints](https://drive.google.com/drive/folders/12ys47-
 pip install torch
 python example/test.py --pretrained [path_to_checkpoint] --mesh_prefix [folder_prefix_for_mesh]
 ```
-The default value for `mesh_prefix` is set to `example/results`. so the output meshes are stored in the folder `example/results`.
+The default value for `mesh_prefix` is set to `example/results`. So the output meshes are stored in the folder `example/results`.
 
 For example, please put the checkpoints in the folder `example/checkpoints/` and run:
 ```
