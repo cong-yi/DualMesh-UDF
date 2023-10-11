@@ -6,8 +6,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 from example.networks.config import parse_options
 from example.networks.mlp import MLPNet
-from DualMeshUDF import extract_mesh, write_obj
-from example.neural_utils import udf_from_mlp, udf_and_grad_from_mlp
+from DualMeshUDF import write_obj
+from example.neural_utils import extract_mesh_from_udf
 
 
 if __name__ == "__main__":
@@ -25,12 +25,8 @@ if __name__ == "__main__":
     if args.pretrained:
         net.load_state_dict(torch.load(args.pretrained))
 
-    ## load functions
-    udf_func = udf_from_mlp(net, device)
-    udf_grad_func = udf_and_grad_from_mlp(net, device)
-
     ## get mesh
-    mesh_v, mesh_f = extract_mesh(udf_func, udf_grad_func)
+    mesh_v, mesh_f = extract_mesh_from_udf(net, device)
     exp_name = ((args.pretrained).split('/')[-1]).replace('.pth','')
     if not os.path.exists(args.mesh_prefix):
         os.makedirs(args.mesh_prefix)

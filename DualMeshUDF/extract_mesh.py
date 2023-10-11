@@ -13,8 +13,8 @@ def extract_mesh(
     Extract the mesh from a UDF
     Parameters
     ------------
-    udf_func : udf
-    udf_grad_func :
+    udf_func : udf function
+    udf_grad_func : udf with gradient
     batch_size: batch size for inferring the UDF network
     max_depth: the max depth of the octree, e.g., max_depth=7 stands for resolution of 128^3
     """

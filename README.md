@@ -16,7 +16,7 @@ Or you can install it directly by:
 pip install "git+https://github.com/cong-yi/DualMesh-UDF"
 ```
 
-### Usage example
+### Usage Example
 ```python
 from DualMeshUDF import extract_mesh
 
@@ -26,18 +26,24 @@ mesh_v, mesh_f = extract_mesh(udf_func, udf_grad_func)
 ```
 
 
-### Example
+### An Example for PyTorch
+Please note that our implementation is not tied to any specific machine learning framework.
 
-We prepared several [checkpoints](https://drive.google.com/drive/folders/12ys47-DjfXC3E-Kt5V2e1DWisynC0rpp?usp=sharing) for test. Please download the checkpoints and run the following command:
+To make it more convenient for PyTorch users, we provide an example with several [checkpoints](https://drive.google.com/drive/folders/12ys47-DjfXC3E-Kt5V2e1DWisynC0rpp?usp=sharing) for testing and demonstration.
+Please install [PyTorch](https://pytorch.org/) accordingly and download the checkpoints. Then run the following command:
 ```
-pip install torch
 python example/test.py --pretrained [path_to_checkpoint] --mesh_prefix [folder_prefix_for_mesh]
 ```
 The default value for `mesh_prefix` is set to `example/results`. So the output meshes are stored in the folder `example/results`.
 
-For example, please put the checkpoints in the folder `example/checkpoints/` and run:
+For example, given the checkpoints in the folder `example/checkpoints/` and run:
 ```
 python example/test.py --pretrained example/checkpoints/fandisk.pth
+```
+
+For other PyTorch-based network, we offer a set of useful tools in `example/neural_utils.py` for reference. With these tools, you can call our method as follows:
+```python
+mesh_v, mesh_f = extract_mesh_from_udf(net, device)
 ```
 
 ## Citation
