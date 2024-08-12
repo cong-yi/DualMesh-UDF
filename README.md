@@ -66,3 +66,6 @@ If you find our method useful for your research, please cite our paper:
     pages     = {0000-0000}
 }
 ```
+
+## Acknowledgement
+The octree structure is partially built upon the [implementation](https://sourceforge.net/projects/dualcontouring/) of [Dual Contouring of Hermite Data](https://dl.acm.org/doi/10.1145/566654.566586).

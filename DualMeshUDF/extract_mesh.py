@@ -58,7 +58,7 @@ def extract_mesh(
 
     tri_faces = triangulate_faces(octree.mesh_v, octree.mesh_f, octree.v_type, octree.mesh_v_dir)
 
-    v, f = igl.remove_duplicates(np.array(octree.mesh_v), tri_faces, 1e-7)
+    v, _, _, f = igl.remove_duplicate_vertices(np.array(octree.mesh_v), tri_faces, 1e-7)
 
     v, f, _, _ = igl.remove_unreferenced(v, f)
 
